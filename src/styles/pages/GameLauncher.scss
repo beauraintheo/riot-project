@@ -1,28 +1,28 @@
 .game-launcher {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
-  gap: 32px;
-  height: 100%;
-  max-width: 1890px;
-  padding: 32px;
-  
-  .game-cards {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+	gap: 32px;
+	height: 100%;
+	max-width: 1890px;
+	padding: 32px;
+	
+	.game-cards {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 24px;
 
-    &:hover {
-      .game-card {
-        background: radial-gradient(
-          100rem circle at var(--xPos) var(--yPos),
-          rgba($white, .4),
-          transparent 15%
-        );
-      }
-    }
-  }
+		&:hover {
+			.game-card {
+				background: radial-gradient(
+					100rem circle at var(--xPos) var(--yPos),
+					rgba($white, .4),
+					transparent 15%
+				);
+			}
+		}
+	}
 }

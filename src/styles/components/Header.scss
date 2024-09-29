@@ -1,0 +1,51 @@
+.header {
+	position: relative;
+
+	.header-button {
+		background-color: $transparent;
+		border: none;
+	}
+
+	.header-dropdown-menu {
+		position: absolute;
+		background-color: $lightGray;
+		color: $gray;
+		top: 100%;
+		left: 50%;
+		transform: translate(-50%, 0);
+		padding: 8px;
+		border-radius: 2px;
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+		width: 160px;
+
+		.header-menu-choice {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 24px;
+			height: 24px;
+			cursor: pointer;
+			transition: .2s ease-in-out;
+			font-family: "Quicksand SemiBold";
+
+			span {
+				width: 100px;
+			}
+
+			svg {
+				width: 20px;
+				height: 20px;
+			}
+
+			&:hover {
+				color: $black;
+			}
+
+			&.selected {
+				color: $carmin;
+			}
+		}
+	}
+}

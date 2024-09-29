@@ -1,7 +1,7 @@
 /**
- * @description: Interface for the icons component
- * @param {string} color - Color of the icons
+ * @typedef IconsProps
+ * @param {string} color - Icons color
  */
 export interface IconsProps {
-  color: string;
+  color?: string;
 }

@@ -1,17 +1,19 @@
-import { useGlow } from "@hooks/useGlow.ts";
+import { Link } from "react-router-dom";
 
 interface GameCardProps {
+  link: string;
   image: string;
   game: string;
   logo: string;
 }
 
 export const GameCard = ({
+  link,
   image,
   game,
   logo,
-}: GameCardProps) => {
-  return (
+}: GameCardProps) => (
+  <Link to={link}>
     <div className="game-card">
       <img
         className="game-card-background"
@@ -23,5 +25,5 @@ export const GameCard = ({
         <img src={logo} alt={`${game} logo`} />
       </div>
     </div>
-  );
-};
+  </Link>
+);

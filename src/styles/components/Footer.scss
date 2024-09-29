@@ -1,0 +1,23 @@
+.footer {
+	width: 100%;
+	text-align: center;
+	font-size: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 8px;
+
+	hr {
+		height: 1px;
+		width: 100%;
+		opacity: .2;
+		background-color: $white;
+		border-radius: 8px;
+		border-color: transparent;
+	}
+
+	span {
+		opacity: .8;
+	}
+}
