@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import { Check } from "@assets/icons/Check.tsx";
-import { Globe } from "@assets/icons/Globe.tsx";
+import { Check } from "@assets/custom/Check.tsx";
+import { Globe } from "@assets/custom/Globe.tsx";
 
 /**
  * @typedef HeaderMenuChoiceProps
@@ -51,6 +51,9 @@ export const Header = () => {
 
   return (
     <header className="header">
+      {/* <RiotLogo /> */}
+      <img src={RiotLogo} alt="Riot Games logo" />
+
       <button
         className="header-button"
         onClick={() => setToggleDropdown(!toggleDropdown)}

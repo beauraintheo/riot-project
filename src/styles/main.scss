@@ -34,6 +34,10 @@ h1 {
 	text-align: left;
 	width: 100%;
 	font-family: "Quicksand Bold";
+
+	@media (max-width: 768px) {
+		font-size: 2rem;
+	}
 }
 
 .svg-icon {

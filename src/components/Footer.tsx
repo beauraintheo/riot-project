@@ -7,8 +7,7 @@ export const Footer = () => {
     <footer className="footer">
       <hr />
       <span>
-        © 2024 - Théo Beaurain -
-        {t("AllRightsReserved")}
+        {`© 2024 - Théo Beaurain - ${t("AllRightsReserved")}`}
       </span>
     </footer>
   );

@@ -4,13 +4,24 @@
 	.header-button {
 		background-color: $transparent;
 		border: none;
+		padding: 4px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: .2s ease-in-out;
+		border-radius: 8px;
+
+		&:hover {
+			cursor: pointer;
+			background-color: rgba(128, 128, 128, .2);
+		}
 	}
 
 	.header-dropdown-menu {
 		position: absolute;
 		background-color: $lightGray;
 		color: $gray;
-		top: 100%;
+		top: calc(100% + 12px);
 		left: 50%;
 		transform: translate(-50%, 0);
 		padding: 8px;
@@ -19,6 +30,20 @@
 		flex-direction: column;
 		gap: 4px;
 		width: 160px;
+
+		&::after {
+			content: "";
+			display : inline-block;
+			position: absolute;
+			height : 0;
+			width : 0;
+			border-right : 8px solid transparent;
+			border-bottom : 8px solid white;
+			border-left : 8px solid transparent;
+			top: 0;
+			left: 50%;
+			transform: translate(-50%, -100%);
+		}
 
 		.header-menu-choice {
 			display: flex;
