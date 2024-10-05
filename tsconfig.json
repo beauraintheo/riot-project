@@ -10,6 +10,7 @@
     "moduleResolution": "NodeNext",
     "paths": {
       "@assets/*": ["src/assets/*"],
+      "@commons/*": ["src/commons/*"],
       "@components/*": ["src/components/*"],
       "@hooks/*": ["src/hooks/*"],
       "@i18n/*": ["src/i18n/*"],

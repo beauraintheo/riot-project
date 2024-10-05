@@ -1,75 +1,87 @@
 .header {
 	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	width: 100%;
 
-	.header-button {
-		background-color: $transparent;
-		border: none;
-		padding: 4px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		transition: .2s ease-in-out;
-		border-radius: 8px;
-
-		&:hover {
-			cursor: pointer;
-			background-color: rgba(128, 128, 128, .2);
-		}
+	.header-logo {
+		width: 100px;
 	}
 
-	.header-dropdown-menu {
-		position: absolute;
-		background-color: $lightGray;
-		color: $gray;
-		top: calc(100% + 12px);
-		left: 50%;
-		transform: translate(-50%, 0);
-		padding: 8px;
-		border-radius: 2px;
-		display: flex;
-		flex-direction: column;
-		gap: 4px;
-		width: 160px;
+	.header-lang {
+		position: relative;
 
-		&::after {
-			content: "";
-			display : inline-block;
-			position: absolute;
-			height : 0;
-			width : 0;
-			border-right : 8px solid transparent;
-			border-bottom : 8px solid white;
-			border-left : 8px solid transparent;
-			top: 0;
-			left: 50%;
-			transform: translate(-50%, -100%);
-		}
-
-		.header-menu-choice {
+		.header-button {
+			background-color: $transparent;
+			border: none;
+			padding: 4px;
 			display: flex;
 			align-items: center;
-			justify-content: space-between;
-			gap: 24px;
-			height: 24px;
-			cursor: pointer;
+			justify-content: center;
 			transition: .2s ease-in-out;
-			font-family: "Quicksand SemiBold";
-
-			span {
-				width: 100px;
-			}
-
-			svg {
-				width: 20px;
-				height: 20px;
-			}
-
+			border-radius: 8px;
+	
 			&:hover {
-				color: $black;
+				cursor: pointer;
+				background-color: rgba(128, 128, 128, .2);
 			}
-
-			&.selected {
-				color: $carmin;
+		}
+	
+		.header-dropdown-menu {
+			position: absolute;
+			background-color: $lightGray;
+			color: $gray;
+			top: calc(100% + 12px);
+			left: 50%;
+			transform: translate(-50%, 0);
+			padding: 8px;
+			border-radius: 2px;
+			display: flex;
+			flex-direction: column;
+			gap: 4px;
+			width: 160px;
+	
+			&::after {
+				content: "";
+				display : inline-block;
+				position: absolute;
+				height : 0;
+				width : 0;
+				border-right : 8px solid transparent;
+				border-bottom : 8px solid $white;
+				border-left : 8px solid transparent;
+				top: 0;
+				left: 50%;
+				transform: translate(-50%, -100%);
+			}
+	
+			.header-menu-choice {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 24px;
+				height: 24px;
+				cursor: pointer;
+				transition: .2s ease-in-out;
+				font-family: "Quicksand SemiBold";
+	
+				span {
+					width: 100px;
+				}
+	
+				svg {
+					width: 20px;
+					height: 20px;
+				}
+	
+				&:hover {
+					color: $black;
+				}
+	
+				&.selected {
+					color: $carmin;
+				}
 			}
 		}
 	}

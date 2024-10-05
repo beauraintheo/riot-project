@@ -1,0 +1,26 @@
+.valorant {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    max-width: 1200px;
+    
+    .valorant-agents {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 32px;
+        width: 100%;
+        margin: 32px auto;
+        overflow-y: scroll;
+
+        & > a {
+            height: 400px;
+            flex: 1 1 calc(25% - 32px);
+            max-width: calc(25% - 32px);
+            margin: 0 auto;
+        }
+    }
+}

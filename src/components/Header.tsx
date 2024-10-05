@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
+import Riot from "@assets/images/RiotLogo.webp";
 import { Check } from "@assets/custom/Check.tsx";
 import { Globe } from "@assets/custom/Globe.tsx";
 
@@ -51,34 +53,37 @@ export const Header = () => {
 
   return (
     <header className="header">
-      {/* <RiotLogo /> */}
-      <img src={RiotLogo} alt="Riot Games logo" />
+      <Link to="/">
+        <img src={Riot} alt="riot-logo" className="header-logo" />
+      </Link>
 
-      <button
-        className="header-button"
-        onClick={() => setToggleDropdown(!toggleDropdown)}
-      >
-        <Globe />
-      </button>
+      <div className="header-lang">
+        <button
+          className="header-button"
+          onClick={() => setToggleDropdown(!toggleDropdown)}
+        >
+          <Globe />
+        </button>
 
-      {
-        toggleDropdown
-          ? (
-            <ul className="header-dropdown-menu">
-              {
-                mappinMenuChoices.map(({ label, value }) => (
-                  <HeaderMenuChoice
-                    key={value}
-                    label={label}
-                    onClick={() => handleChangeLang(value)}
-                    displayIcon={value === language}
-                  />
-                ))
-              }
-            </ul>
-            )
-          : null
-      }
+        {
+          toggleDropdown
+            ? (
+              <ul className="header-dropdown-menu">
+                {
+                  mappinMenuChoices.map(({ label, value }) => (
+                    <HeaderMenuChoice
+                      key={value}
+                      label={label}
+                      onClick={() => handleChangeLang(value)}
+                      displayIcon={value === language}
+                    />
+                  ))
+                }
+              </ul>
+              )
+            : null
+        }
+      </div>
     </header>
   );
 };

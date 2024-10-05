@@ -1,10 +1,17 @@
 /**
  * Fetches Valorant agents data from the API
- * @returns {Promise<ValorantAgent[]>} The list of Valorant agents
+ * @param {object} options
+ * @param {string} options.lang - Language to fetch the agents in
+ * @returns {Promise<ValorantAgent[]>} List of Valorant agents
  */
-export const fetchAgents = async () => {
+
+interface FetchAgentsOptions {
+  lang: string;
+}
+
+export const fetchAgents = async ({ lang }: FetchAgentsOptions) => {
   try {
-    const url = process.env.VALORANT_API_URL;
+    const url = `${process.env.VALORANT_API_URL}&${lang}`;
 
     if (!url)
       throw new Error("VALORANT_API_URL is not defined");
